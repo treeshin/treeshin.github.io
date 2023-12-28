@@ -4,7 +4,7 @@
 title: treeshin's blog
 description: >- # this means to ignore newlines until "baseurl:"
   treeshin is a book club manager in South Korea.
-baseurl: "/treeshin" # the subpath of the site
+baseurl: "" # the subpath of the site
 url: "https://treeshin.github.io" # the base hostname & protocol for the site
 og_image: /assets/img/profile-pic.jpg
 google_analytics: "UA-121636368-3"
