@@ -1,14 +1,13 @@
 ---
-# assets/css/main.scss
+# Jekyll에서 SCSS를 CSS로 변환하기 위해 이 두 줄(Front Matter)이 반드시 필요합니다.
 ---
 
-@import "minimal-mistakes/skins/default"; // 또는 사용 중인 스킨 이름
+@import "minimal-mistakes";
 
 /* 상단 메뉴 드롭다운 스타일 */
 .masthead__menu-item {
   position: relative;
 
-  /* 하위 메뉴가 있을 때 hover 처리 */
   &:hover > .dropdown-menu {
     display: block;
   }
@@ -31,7 +30,7 @@
 
   li {
     margin: 0;
-    
+
     a {
       display: block;
       padding: 8px 16px;

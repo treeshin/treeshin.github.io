@@ -3,6 +3,7 @@ title: FOSEP
 email: fosep@example.com
 description: "FOSEP 공식 웹사이트 - 지속 가능한 과학 및 사회 이슈 리포트"
 url: "https://treeshin.github.io"
+baseurl: ""  # treeshin.github.io 저장소 특성상 비워두거나 생략해야 합니다.
 
 # 테마 설정 (Minimal Mistakes 사용)
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
