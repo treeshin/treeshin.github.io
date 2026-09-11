@@ -1,0 +1,23 @@
+{% assign navigation = site.data.navigation[include.nav] %}
+
+<nav id="site-nav" class="greedy-nav">
+  {% if site.title %}
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  {% endif %}
+  <ul class="visible-links">
+    {% for link in navigation %}
+      <li class="masthead__menu-item">
+        <a href="{{ link.url | relative_url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+        {% if link.children %}
+          <ul class="dropdown-menu">
+            {% for child in link.children %}
+              <li>
+                <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

@@ -1,7 +1,41 @@
+# _data/navigation.yml
 main:
-  - title: "소개 (About)"
-    url: /about/
-  - title: "리포트 & 카테고리"
-    url: /categories/
-  - title: "뉴스레터"
-    url: /newsletter/
+  - title: "소개"
+    url: "/about/history/"
+    children:
+      - title: "연혁"
+        url: "/about/history/"
+      - title: "정관"
+        url: "/about/rules/"
+      - title: "가입신청"
+        url: "/about/join/"
+      - title: "뉴스레터"
+        url: "/categories/#뉴스레터"
+
+  - title: "공지사항"
+    url: "/categories/#활동-알림"
+    children:
+      - title: "활동 알림"
+        url: "/categories/#활동-알림"
+      - title: "회원 소식"
+        url: "/categories/#회원-소식"
+      - title: "운영위원회"
+        url: "/categories/#운영위원회"
+
+  - title: "이슈브리핑"
+    url: "/categories/#이슈브리프"
+    children:
+      - title: "이슈브리프"
+        url: "/categories/#이슈브리프"
+      - title: "이슈리포트"
+        url: "/categories/#이슈리포트"
+      - title: "기사"
+        url: "/categories/#기사"
+
+  - title: "논평"
+    url: "/categories/#논평"
+    children:
+      - title: "논평"
+        url: "/categories/#논평"
+      - title: "보도자료"
+        url: "/categories/#보도자료"
