@@ -5,53 +5,62 @@
 @import "minimal-mistakes";
 
 /* ==========================================================================
-   상단 메뉴 드롭다운 (Dropdown Menu) 커스텀
+   상단 메뉴 커스텀 드롭다운 (Custom Dropdown)
    ========================================================================== */
 
-.masthead__menu-item.dropdown {
-  position: relative;
+/* 1. 상단 내비게이션 영역 넘침 자르기 방지 */
+.masthead, .masthead__inner-wrap, .masthead__menu, .greedy-nav {
+  overflow: visible !important;
+}
 
-  /* 마우스를 메뉴나 하위 메뉴에 올렸을 때 유지 */
+/* 2. 드롭다운 부모 요소 위치 고정 */
+.masthead__menu-item.custom-dropdown {
+  position: relative !important;
+  display: inline-block !important;
+
   &:hover {
-    .dropdown-menu {
+    .custom-dropdown-menu {
       display: block !important;
-      opacity: 1;
-      visibility: visible;
+      opacity: 1 !important;
+      visibility: visible !important;
     }
   }
 }
 
-.dropdown-menu {
+/* 3. 드롭다운 서브메뉴 박스 스타일 */
+.custom-dropdown-menu {
   display: none !important;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 9999;
-  min-width: 150px;
-  padding: 8px 0;
-  margin: 0;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  list-style: none;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 99999 !important;
+  min-width: 160px !important;
+  padding: 8px 0 !important;
+  margin: 0 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 4px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  list-style: none !important;
 
   li {
     margin: 0 !important;
     padding: 0 !important;
     display: block !important;
+    list-style: none !important;
 
     a {
       display: block !important;
-      padding: 8px 16px !important;
+      padding: 10px 18px !important;
       color: #333333 !important;
-      font-size: 0.9em !important;
-      font-weight: normal !important;
+      font-size: 0.85rem !important;
+      font-weight: 500 !important;
       text-decoration: none !important;
-      white-space: nowrap;
+      white-space: nowrap !important;
+      line-height: 1.2 !important;
 
       &:hover {
-        background-color: #f5f5f5 !important;
+        background-color: #f1f5f9 !important;
         color: #000000 !important;
       }
     }
