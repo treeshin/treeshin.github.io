@@ -13,8 +13,8 @@
         </a>
         <ul class="visible-links">
           {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item custom-dropdown">
-              <a href="{{ link.url | relative_url }}" {% if link.description %}title="{{ link.description }}"{% endif %}>
+            <li class="masthead__menu-item {% if link.children %}custom-dropdown{% endif %}">
+              <a href="{{ link.url | relative_url }}">
                 {{ link.title }}
                 {% if link.children %} <i class="fas fa-caret-down" aria-hidden="true"></i>{% endif %}
               </a>
