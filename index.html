@@ -1,12 +1,12 @@
 ---
-layout: home
+layout: single
 author_profile: false
 
 header:
   overlay_image: /assets/images/main-banner.jpg
-  overlay_filter: 0.5 # 0.1(밝음) ~ 0.8(어둡게) 어두운 오버레이를 깔아 텍스트 가독성을 높입니다.
-  title: "공공을 위한 과학기술인포럼"
-  excerpt: "과학적 데이터와 사회적 통찰을 바탕으로 지속 가능한 정책 및 대안을 연구합니다."
+  overlay_filter: 0.5
+  title: "공공을 위한 과학기술인포럼 FOSEP"
+  excerpt: "과학기술의 공공성, 합리성, 민주성을 고민하는 과학기술인들의 모임입니다."
   actions:
     - label: "FOSEP 소개"
       url: "/about/history/"
@@ -15,3 +15,10 @@ header:
 ---
 
 ### 최신 소식 및 리포트
+
+{% assign posts = site.posts %}
+<div class="entries-grid">
+  {% for post in posts limit:6 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
